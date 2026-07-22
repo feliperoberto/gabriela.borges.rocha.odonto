@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# testing
+/coverage
+/test-results
+app/tests/playwright/screenshots/
+app/tests/playwright/report/
+app/tests/playwright/.auth/
+
+# storybook
+storybook-static/
+
+# misc
+.DS_Store
+*.pem
+.env*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editor
+.vscode/*
+!.vscode/extensions.json

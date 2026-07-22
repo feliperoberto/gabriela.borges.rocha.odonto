@@ -1,0 +1,47 @@
+name: Story
+description: A slice of an epic, grouping related tasks
+title: "[Story] "
+labels: ["story"]
+body:
+  - type: input
+    id: epic
+    attributes:
+      label: Parent epic
+      description: Issue number of the epic this story belongs to
+      placeholder: "#1"
+    validations:
+      required: true
+  - type: dropdown
+    id: persona
+    attributes:
+      label: Persona
+      description: Who is primarily responsible for this story?
+      options:
+        - swe
+        - designer
+        - product-owner
+        - devops-sre
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does this story deliver?
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: Linked task issues (checklist, filled in as they're created)
+      value: |
+        - [ ] #
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: false
