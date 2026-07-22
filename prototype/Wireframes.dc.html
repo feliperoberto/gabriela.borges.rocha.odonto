@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;family=Caveat:wght@600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:'Patrick Hand',cursive}
+a{color:#a6634b}a:hover{color:#592a19}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 13px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+.wf{display:flex;flex-direction:column;gap:0;font-size:15px;color:#333;line-height:1.25}
+.wf section{padding:14px 16px;border-bottom:1px dashed #bbb}
+.wf h3{font-family:'Caveat',cursive;font-size:22px;margin:0 0 6px;color:#111}
+.wf .note{font-size:12.5px;color:#999;font-style:italic}
+.ph{background:repeating-linear-gradient(45deg,#eee,#eee 6px,#f7f7f7 6px,#f7f7f7 12px);border:1px solid #ccc;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#888;font:11px ui-monospace,monospace;text-align:center;padding:4px}
+.btn{background:#333;color:#fff;border-radius:20px;padding:6px 14px;display:inline-block;font-size:14px}
+.btn.acc{background:#a6634b}
+.chip{border:1.5px solid #999;border-radius:14px;padding:2px 10px;font-size:12.5px;display:inline-block}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.arrow{font-family:'Caveat',cursive;color:#a6634b;font-size:15px}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Wireframe escolhido — scrolltelling em capítulos (refinado de <a class="dv-oid" href="#1c">1c</a>)</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>História primeiro — scrolltelling em capítulos</div>
+<div class="dv-card" style="width:320px">
+<div class="wf">
+
+<section style="background:#f2e4da;text-align:center">
+<div class="ph" style="width:52px;height:52px;border-radius:12px;margin:0 auto">GB</div>
+<h3 style="font-size:30px;margin-top:14px">Cuidar do seu sorriso é a minha história</h3>
+<p class="note">frase revela palavra por palavra ao rolar</p>
+</section>
+
+<section style="background:#f2e4da">
+<div class="row" style="justify-content:space-around;text-align:center;font-size:12px">
+<div><div class="ph" style="width:40px;height:40px;border-radius:50%;margin:0 auto">✓</div>CRO-SP</div>
+<div><div class="ph" style="width:40px;height:40px;border-radius:50%;margin:0 auto">★</div>convênios</div>
+<div><div class="ph" style="width:40px;height:40px;border-radius:50%;margin:0 auto">♥</div>2 cidades</div>
+</div>
+<div class="note" style="text-align:center">faixa de confiança fecha o bloco hero (mesmo fundo blush)</div>
+</section>
+
+<section>
+<span class="arrow">capítulo 1 ↓</span>
+<h3>Do outro lado da cadeira</h3>
+<p style="font-size:13.5px;margin:4px 0">Anos acompanhando cada detalhe do cuidado com pacientes…</p>
+<div class="row"><span class="chip">acolhimento</span><span class="chip">esmero técnico</span><span class="chip">ética</span></div>
+</section>
+
+<section style="background:#faf3ee">
+<span class="arrow">capítulo 2 ↓</span>
+<h3>Hoje, cirurgiã-dentista</h3>
+<div class="ph" style="height:110px">foto atendimento (parallax)</div>
+<p style="font-size:13.5px;margin:4px 0">…com a segurança de quem escolheu a profissão conhecendo-a profundamente.</p>
+</section>
+
+<section>
+<span class="arrow">capítulo 3 ↓</span>
+<h3>Sobre mim</h3>
+<div class="row" style="align-items:center"><div class="ph" style="width:70px;height:70px;border-radius:50%">foto retrato</div><p style="flex:1;margin:0;font-size:13px">Experiência vivida dos dois lados da cadeira, ética, dedicação.</p></div>
+</section>
+
+<section style="background:#faf3ee">
+<span class="arrow">capítulo 4 ↓</span>
+<h3>Quem passou por aqui</h3>
+<div class="ph" style="height:70px">cards empilhados, scroll horizontal</div>
+</section>
+
+<section>
+<span class="arrow">capítulo 5 ↓</span>
+<h3>O que eu faço</h3>
+<div class="row"><span class="chip">Prevenção</span><span class="chip">Restauração</span><span class="chip">Limpeza</span><span class="chip">Clareamento</span><span class="chip">Odontopediatria</span><span class="chip">Cirurgia</span><span class="chip">Urgência</span><span class="chip">Botox</span></div>
+<div class="note">tap no chip → legenda em linguagem simples (ex.: "profilaxia = limpeza profissional")</div>
+</section>
+
+<section style="background:#faf3ee">
+<span class="arrow">capítulo 6 ↓</span>
+<h3>Onde você me encontra</h3>
+<div class="row" style="margin:6px 0 8px"><span class="chip" style="background:#333;color:#fff;border-color:#333">Todas</span><span class="chip">São José dos Campos</span><span class="chip">Mogi das Cruzes</span></div>
+<div class="note" style="margin-bottom:6px">chips de cidade filtram a lista abaixo</div>
+<div style="display:flex;gap:8px;overflow-x:auto">
+<div style="flex:none;width:130px"><div class="ph" style="height:80px">foto consultório</div><p style="margin:4px 0 0;font-size:12.5px"><b>Parque Industrial</b><br>São José dos Campos</p></div>
+<div style="flex:none;width:130px"><div class="ph" style="height:80px">foto consultório</div><p style="margin:4px 0 0;font-size:12.5px"><b>Pq. Monte Líbano</b><br>Mogi das Cruzes</p></div>
+<div style="flex:none;width:130px"><div class="ph" style="height:80px">foto consultório<br>(centro-mogi)</div><p style="margin:4px 0 0;font-size:12.5px"><b>Centro</b><br>Mogi das Cruzes</p></div>
+</div>
+<div class="note">lista horizontal, rolável; nº de unidades pode variar</div>
+</section>
+
+<section>
+<h3>Convênios</h3>
+<div class="row"><div class="ph" style="width:70px;height:28px">logo</div><div class="ph" style="width:70px;height:28px">logo</div><div class="ph" style="width:70px;height:28px">logo</div></div>
+</section>
+
+<section style="background:#f2e4da;text-align:center">
+<span class="btn acc">WhatsApp (12) 98318-5513</span>
+<p style="font-size:12px;margin:8px 0 0">Instagram · e-mail · CRO-SP 176648</p>
+</section>
+
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Ajustes possíveis: "troque a ordem dos capítulos" · "hero com foto em vez de monograma" · "consultórios como cards com foto em vez de mapa"</p>
+</section>
+
+</x-dc>
+</body>
+</html>
