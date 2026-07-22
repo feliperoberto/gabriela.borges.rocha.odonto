@@ -1,0 +1,88 @@
+/**
+ * Design tokens for Dra. Gabriela Borges Rocha's landing page.
+ *
+ * Every color, font, radius, and shadow used by a component must come from
+ * one of these variables — never hard-code a hex, font name, or px value
+ * the tokens already carry. Palette and rules are extracted verbatim from
+ * `prototype/uploads/anexos/branding-guide.md` and `prototype/Landing Page.dc.html`.
+ * See `DESIGN.md` for usage rules and contrast pairings.
+ */
+
+:root {
+  /* Primary palette */
+  --color-blush: #f2dbce;
+  --color-chocolate: #592a19;
+  --color-terracotta: #a6634b;
+
+  /* Secondary palette */
+  --color-nude: #d9a796;
+  --color-rose: #d98989;
+
+  /* Neutrals */
+  --color-warm-white: #fffaf7;
+  --color-espresso: #2e1a10;
+
+  /* Extended palette (reserved, unused on this page) */
+  --color-sage: #8fa68b;
+  --color-gold: #c4a77d;
+
+  /* WhatsApp brand */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #128c42;
+
+  /* Semantic roles */
+  --color-bg: var(--color-warm-white);
+  --color-bg-alt: #f2dbce66; /* Blush at 40% opacity, section alternation */
+  --color-text: var(--color-chocolate);
+  --color-text-muted: var(--color-terracotta);
+  --color-text-fine-print: var(--color-espresso);
+  --color-border: var(--color-nude);
+  --color-border-strong: var(--color-terracotta);
+  --color-accent-quote: var(--color-rose);
+
+  /* Fonts (variables set by next/font in styles/fonts.ts) */
+  --font-display: var(--font-family-display), serif;
+  --font-body: var(--font-family-body), sans-serif;
+
+  /* Radii */
+  --radius-pill: 999px;
+  --radius-card: 20px;
+  --radius-card-lg: 24px;
+
+  /* Shadows */
+  --shadow-card: 0 10px 26px rgba(89, 42, 25, 0.08);
+  --shadow-card-lg: 0 18px 40px rgba(89, 42, 25, 0.18);
+  --shadow-cta: 0 12px 28px rgba(89, 42, 25, 0.22);
+  --shadow-cta-whatsapp: 0 12px 28px rgba(18, 140, 66, 0.3);
+
+  /* Motion */
+  --motion-reveal-duration: 0.8s;
+  --motion-reveal-distance: 28px;
+  --motion-float-duration: 9s;
+  --motion-float-distance: 14px;
+
+  /* Spacing (section padding scale, mirrors the prototype's clamp()s) */
+  --space-section-y: clamp(60px, 10vw, 88px);
+  --space-section-x: 24px;
+}
+
+@keyframes gb-up {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gb-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(-1 * var(--motion-float-distance)));
+  }
+}
