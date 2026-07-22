@@ -30,13 +30,13 @@ describe("useRevealOnScroll", () => {
     vi.useRealTimers();
   });
 
-  it("stays hidden while the element is below the reveal threshold (top >= 0.9 * innerHeight)", () => {
-    render(<TestTarget reducedMotion={false} top={780} />);
-    expect(screen.getByTestId("target")).toHaveTextContent("hidden");
+  it("stays revealed when the element is already within the threshold at mount", () => {
+    render(<TestTarget reducedMotion={false} top={500} />);
+    expect(screen.getByTestId("target")).toHaveTextContent("revealed");
   });
 
-  it("reveals once the element crosses the 0.9 * innerHeight threshold", () => {
-    render(<TestTarget reducedMotion={false} top={780} />);
+  it("hides an element that is below the fold at mount, then reveals it once scrolled into view", () => {
+    render(<TestTarget reducedMotion={false} top={5000} />);
     expect(screen.getByTestId("target")).toHaveTextContent("hidden");
 
     screen.getByTestId("target").getBoundingClientRect = () => ({ top: 500 }) as DOMRect;
@@ -52,7 +52,7 @@ describe("useRevealOnScroll", () => {
     expect(screen.getByTestId("target")).toHaveTextContent("revealed");
   });
 
-  it("is revealed immediately under reduced motion, with no scroll needed", () => {
+  it("never hides the element under reduced motion, even if below the fold", () => {
     render(<TestTarget reducedMotion={true} top={5000} />);
     expect(screen.getByTestId("target")).toHaveTextContent("revealed");
   });
