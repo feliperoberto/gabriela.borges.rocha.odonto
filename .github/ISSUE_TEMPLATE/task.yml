@@ -1,0 +1,46 @@
+name: Task
+description: A single unit of work, sized to land in one pull request
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: input
+    id: story
+    attributes:
+      label: Parent story
+      description: Issue number of the story this task belongs to
+      placeholder: "#2"
+    validations:
+      required: true
+  - type: dropdown
+    id: persona
+    attributes:
+      label: Persona
+      description: Who does this task?
+      options:
+        - swe
+        - designer
+        - product-owner
+        - devops-sre
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be built/changed?
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Expected files touched
+      description: Rough file list — keep within the 3-7 file / 200-350 line PR limit
+    validations:
+      required: false
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: How will this be validated (container command, test, screenshot)?
+    validations:
+      required: false

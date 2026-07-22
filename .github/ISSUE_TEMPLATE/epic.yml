@@ -1,0 +1,40 @@
+name: Epic
+description: A large body of work spanning multiple stories
+title: "[Epic] "
+labels: ["epic"]
+body:
+  - type: dropdown
+    id: persona
+    attributes:
+      label: Persona
+      description: Who owns driving this epic forward?
+      options:
+        - swe
+        - designer
+        - product-owner
+        - devops-sre
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What outcome does this epic deliver?
+    validations:
+      required: true
+  - type: textarea
+    id: stories
+    attributes:
+      label: Stories
+      description: Linked story issues (checklist, filled in as they're created)
+      value: |
+        - [ ] #
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Decisions / notes
+      description: Record cross-cutting decisions here as comments accumulate
+    validations:
+      required: false
