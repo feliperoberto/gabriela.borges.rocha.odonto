@@ -16,8 +16,16 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "2"
-          memory: 1024M
+          # This service is reused for lint/type-check/test in CI (`docker
+          # compose run --rm --no-deps app npm run <script>`), not just
+          # serving — vitest spins up a jsdom environment per test file in
+          # parallel workers. 1024M OOM-killed the suite outright; 2048M/2
+          # cpus avoided the kill but tests timed out under CPU throttling
+          # (userEvent.click exceeding the 5s default timeout). Sized to
+          # comfortably run the full suite locally; matches a GitHub-hosted
+          # Actions runner's actual capacity, so CI won't hit the same wall.
+          cpus: "4"
+          memory: 4096M
         reservations:
           cpus: "0.5"
           memory: 256M

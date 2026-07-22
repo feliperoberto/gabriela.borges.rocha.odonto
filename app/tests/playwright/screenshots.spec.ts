@@ -33,7 +33,7 @@ const PROCEDURES: { slug: string; nome: string }[] = [
   { slug: "botox", nome: "Botox" },
 ];
 
-function sectionByHeading(page: Page, name: string) {
+function sectionByHeading(page: Page, name: string | RegExp) {
   return page.getByRole("heading", { name }).locator("xpath=ancestor::section[1]");
 }
 
@@ -53,10 +53,7 @@ async function revealEverything(page: Page) {
 
 for (const viewport of VIEWPORTS) {
   test.describe(`screenshots (${viewport.name})`, () => {
-    test.use({
-      viewport: { width: viewport.width, height: viewport.height },
-      reducedMotion: "reduce",
-    });
+    test.use({ viewport: { width: viewport.width, height: viewport.height } });
 
     const dir = `tests/playwright/screenshots/${viewport.name}`;
 
