@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "parque-industrial",
+    "bairro": "Parque Industrial",
+    "cidade": "São José dos Campos",
+    "foto": "/images/consultorio-parque-industrial.jpg",
+    "alt": "Consultório no Parque Industrial, São José dos Campos"
+  },
+  {
+    "slug": "parque-monte-libano",
+    "bairro": "Parque Monte Líbano",
+    "cidade": "Mogi das Cruzes",
+    "foto": "/images/consultorio-parque-monte-libano.png",
+    "alt": "Consultório no Parque Monte Líbano, Mogi das Cruzes"
+  },
+  {
+    "slug": "centro-mogi",
+    "bairro": "Centro",
+    "cidade": "Mogi das Cruzes",
+    "foto": "/images/centro-mogi.jpeg",
+    "alt": "Consultório no Centro de Mogi das Cruzes"
+  }
+]

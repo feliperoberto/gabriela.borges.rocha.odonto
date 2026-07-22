@@ -1,0 +1,13 @@
+{
+  "nome": "Dra. Gabriela Borges Rocha",
+  "cro": "CRO-SP 176648",
+  "tel": "+5512983185513",
+  "telDisplay": "(12) 9 8318-5513",
+  "email": "dra.gabrielaborgesrocha@gmail.com",
+  "instagram": "dra.gabiborges.odonto",
+  "cities": ["São José dos Campos", "Mogi das Cruzes"],
+  "whatsapp": {
+    "phone": "5512983185513",
+    "defaultMessage": "Olá, Dra. Gabriela! Gostaria de agendar uma avaliação."
+  }
+}

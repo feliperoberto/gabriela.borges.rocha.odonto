@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "prevencao",
+    "nome": "Prevenção",
+    "desc": "Acompanhamento contínuo para evitar cáries e problemas na gengiva antes que apareçam — o cuidado mais importante de todos."
+  },
+  {
+    "slug": "dentistica-restauradora",
+    "nome": "Dentística restauradora",
+    "desc": "As \"obturações\" e restaurações que devolvem forma, função e estética a dentes danificados por cárie ou fraturas."
+  },
+  {
+    "slug": "profilaxia-dental",
+    "nome": "Profilaxia dental",
+    "desc": "A limpeza profissional: remoção de placa e tártaro que a escovação não alcança, deixando os dentes lisos e saudáveis."
+  },
+  {
+    "slug": "clareamento",
+    "nome": "Clareamento",
+    "desc": "Dentes visivelmente mais claros, com técnica segura e acompanhamento profissional do início ao fim."
+  },
+  {
+    "slug": "odontopediatria",
+    "nome": "Odontopediatria",
+    "desc": "Atendimento acolhedor e paciente para crianças, transformando a ida ao dentista em uma experiência tranquila."
+  },
+  {
+    "slug": "cirurgia",
+    "nome": "Cirurgia",
+    "desc": "Extrações e pequenos procedimentos cirúrgicos realizados com planejamento, segurança e conforto."
+  },
+  {
+    "slug": "urgencia",
+    "nome": "Urgência",
+    "desc": "Alívio rápido para dor de dente, traumas e imprevistos — atendimento prioritário quando você mais precisa."
+  },
+  {
+    "slug": "botox",
+    "nome": "Botox",
+    "desc": "Aplicação de toxina botulínica com finalidade terapêutica e estética, por profissional habilitada."
+  }
+]
