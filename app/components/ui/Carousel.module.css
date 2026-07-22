@@ -1,0 +1,35 @@
+.wrapper {
+  position: relative;
+}
+
+.edgeFade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 64px;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(251, 238, 230, 0), #fbeee6);
+}
+
+.track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 36px 64px 12px clamp(24px, calc(50vw - 500px), 50vw);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.hint {
+  margin: 6px 0 0;
+  text-align: center;
+  font: 500 13px var(--font-body);
+  color: var(--color-terracotta);
+}
