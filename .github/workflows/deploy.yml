@@ -32,6 +32,13 @@ jobs:
       - name: Static export build
         run: docker compose --profile deploy run --rm app-export
 
+      - name: Fix ownership of bind-mounted build output
+        # The container runs as root (no USER set in the Dockerfile), so
+        # files it writes into the bind-mounted ./app dir — including out/ —
+        # are root-owned on the runner. Subsequent steps run as the normal
+        # runner user and can't write into a root-owned directory otherwise.
+        run: sudo chown -R "$(id -u)":"$(id -g)" app/out
+
       - name: Add .nojekyll (so GitHub Pages serves the _next/ directory)
         run: touch app/out/.nojekyll
 
