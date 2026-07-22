@@ -1,0 +1,54 @@
+.section {
+  padding: 88px 24px;
+  background: var(--color-warm-white);
+  scroll-margin-top: 20px;
+}
+
+.layout {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+}
+
+.imageWrapper {
+  flex: 0 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.parallax {
+  position: relative;
+  width: min(280px, 72vw);
+  height: min(340px, 88vw);
+  border-radius: 52% 48% 46% 54% / 58% 56% 44% 42%;
+  overflow: hidden;
+  box-shadow: var(--shadow-card-lg);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.text {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.description {
+  margin: 0;
+  font: 400 17px/1.7 var(--font-body);
+  color: var(--color-chocolate);
+}
+
+.credentials {
+  margin: 0;
+  font: 400 15px/1.6 var(--font-body);
+  color: var(--color-terracotta);
+}
