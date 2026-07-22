@@ -1,0 +1,22 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px clamp(20px, 5vw, 56px);
+}
+
+.logo {
+  object-fit: contain;
+  animation: gb-up 0.8s 0.1s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo {
+    animation: none;
+  }
+}
