@@ -10,3 +10,24 @@ import { afterEach } from "vitest";
 afterEach(() => {
   cleanup();
 });
+
+// jsdom does not implement matchMedia. useReducedMotion (and anything that
+// renders it, e.g. RevealGroup) calls it unconditionally on mount, so every
+// jsdom test needs a working default — not just the tests that target the
+// hook directly. Guarded on `typeof window` since some test files (e.g.
+// lib/content/client.server.test.ts) override the project's environment to
+// "node" via a `@vitest-environment node` pragma, where `window` doesn't
+// exist at all. Defaults to "no preference"; tests asserting reduced-motion
+// behavior stub this themselves with a matches:true implementation.
+if (typeof window !== "undefined") {
+  Object.defineProperty(window, "matchMedia", {
+    writable: true,
+    configurable: true,
+    value: (query: string) => ({
+      matches: false,
+      media: query,
+      addEventListener: () => {},
+      removeEventListener: () => {},
+    }),
+  });
+}
