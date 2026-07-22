@@ -1,0 +1,55 @@
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font: 600 16px var(--font-body);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.cta:hover {
+  text-decoration: none;
+}
+
+.outline {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--color-chocolate);
+  border: 1.5px solid var(--color-nude);
+  padding: 12px 22px;
+  background: rgba(255, 250, 247, 0.6);
+}
+
+.outline:hover {
+  background: var(--color-chocolate);
+  color: var(--color-warm-white);
+  border-color: var(--color-chocolate);
+}
+
+.whatsapp {
+  background: var(--color-whatsapp);
+  color: #fff;
+  padding: 17px 34px;
+  box-shadow: var(--shadow-cta-whatsapp);
+}
+
+.whatsapp:hover {
+  background: var(--color-whatsapp-hover);
+  color: #fff;
+}
+
+.solid {
+  background: var(--color-chocolate);
+  color: var(--color-warm-white);
+  padding: 17px 36px;
+  box-shadow: var(--shadow-cta);
+}
+
+.solid:hover {
+  background: var(--color-terracotta);
+  color: var(--color-warm-white);
+}
