@@ -1,0 +1,32 @@
+.card {
+  flex: 0 0 min(300px, 78vw);
+  scroll-snap-align: center;
+  margin: 0;
+  background: var(--color-warm-white);
+  border: 1px solid #d9a79666;
+  border-radius: var(--radius-card);
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.quoteMark {
+  font: 700 54px/0.6 var(--font-display);
+  color: var(--color-rose);
+}
+
+.quote {
+  margin: 0;
+  font: 400 15.5px/1.65 var(--font-body);
+  color: var(--color-chocolate);
+}
+
+.author {
+  font: 600 13px var(--font-body);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-top: auto;
+}
