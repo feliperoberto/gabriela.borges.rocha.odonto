@@ -79,8 +79,7 @@ services:
       - PLAYWRIGHT_BASE_URL=http://localhost:${APP_PORT:-3000}
       - NODE_ENV=test
     command: >
-      sh -c "npm install --save-dev @playwright/test@latest &&
-             npx playwright install --with-deps chromium &&
+      sh -c "npx playwright install --with-deps chromium &&
              npm run playwright"
     profiles:
       - testing
