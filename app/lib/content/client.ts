@@ -9,6 +9,12 @@ import type { Insurance, Location, Procedure, Profile, Testimonial } from "./typ
  * components) it reads that same file directly, since no HTTP server is
  * listening yet during static generation. Vitest unit tests read the file
  * through the same fs path, so app, build, and tests share one fixture set.
+ *
+ * Server-only by practical import chain: this file's node:fs/promises
+ * import means it must never be imported by a Client Component — pure
+ * derivation helpers (buildWaUrl, buildCityFilters) live in ./derive
+ * instead, specifically so client-side code can use them without pulling
+ * this file's Node-only branch into the browser bundle.
  */
 async function getContent<T>(name: string): Promise<T> {
   if (typeof window === "undefined") {
@@ -26,14 +32,3 @@ export const getTestimonials = (): Promise<Testimonial[]> =>
   getContent<Testimonial[]>("testimonials");
 export const getInsurances = (): Promise<Insurance[]> => getContent<Insurance[]>("insurances");
 export const getProfile = (): Promise<Profile> => getContent<Profile>("profile");
-
-/** Matches the prototype's `waUrl` derivation: never stored, always built from profile + message. */
-export function buildWaUrl(profile: Profile, message?: string): string {
-  const text = message ?? profile.whatsapp.defaultMessage;
-  return `https://wa.me/${profile.whatsapp.phone}?text=${encodeURIComponent(text)}`;
-}
-
-/** Matches the prototype's city-filter chip list: "Todas" plus every clinic city. */
-export function buildCityFilters(profile: Profile): string[] {
-  return ["Todas", ...profile.cities];
-}
