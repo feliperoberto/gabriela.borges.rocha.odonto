@@ -1,0 +1,73 @@
+name: Deploy to GitHub Pages
+
+# Runs independently of ci.yml on push to main — keeps the two workflows
+# decoupled so a transient CI flake doesn't block deploying otherwise-good
+# code (same rationale as this account's markdown project). Custom domain:
+# gabrielaborgesrocha.feliperoberto.com.br (already configured on this
+# repo's Pages settings, build_type: workflow).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build export image
+        run: docker compose --profile deploy build app-export
+
+      - name: Static export build
+        run: docker compose --profile deploy run --rm app-export
+
+      - name: Add .nojekyll (so GitHub Pages serves the _next/ directory)
+        run: touch app/out/.nojekyll
+
+      - name: Preserve custom domain (CNAME)
+        run: cp CNAME app/out/CNAME
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  smoke-check:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: HTTP smoke check
+        run: |
+          set -euo pipefail
+          URL="https://gabrielaborgesrocha.feliperoberto.com.br/"
+          echo "Checking $URL"
+          BODY="$(curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors "$URL")"
+          # profile.nome/cities are data (public/mocks/profile.json) and could
+          # change independently of a successful deploy — assert only the
+          # stable, non-interpolated part of the <title>.
+          if ! grep -qF "Cirurgiã-Dentista em" <<< "$BODY"; then
+            echo "Smoke check failed: expected content not found at $URL"
+            exit 1
+          fi
+          echo "Smoke check passed."

@@ -70,6 +70,26 @@ services:
           cpus: "2"
           memory: 1024M
 
+  app-export:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    working_dir: /home/app
+    volumes:
+      - ./app:/home/app
+      - app_export_node_modules:/home/app/node_modules
+    environment:
+      - NEXT_STATIC_EXPORT=true
+      - NEXT_PUBLIC_SITE_URL=https://gabrielaborgesrocha.feliperoberto.com.br
+    command: sh -c "npm ci && npm run build"
+    profiles:
+      - deploy
+    deploy:
+      resources:
+        limits:
+          cpus: "4"
+          memory: 4096M
+
   playwright:
     build:
       context: ./app
@@ -104,3 +124,4 @@ services:
 volumes:
   app_node_modules:
   app_dev_node_modules:
+  app_export_node_modules:
