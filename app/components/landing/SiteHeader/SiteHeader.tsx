@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { CtaLink } from "@/components/ui/CtaLink";
-import { buildWaUrl } from "@/lib/content/client";
+import { buildWaUrl } from "@/lib/content/derive";
 import type { Profile } from "@/lib/content/types";
 
 import styles from "./SiteHeader.module.css";
