@@ -1,0 +1,44 @@
+.footer {
+  background: var(--color-blush);
+  padding: 80px 24px 40px;
+  text-align: center;
+}
+
+.content {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.title {
+  margin: 0;
+  font: 600 clamp(34px, 6vw, 52px) / 1.15 var(--font-display);
+  color: var(--color-chocolate);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 26px;
+  font: 500 15px var(--font-body);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.credentials {
+  margin: 18px 0 0;
+  font: 400 13px/1.6 var(--font-body);
+  color: var(--color-terracotta);
+}
