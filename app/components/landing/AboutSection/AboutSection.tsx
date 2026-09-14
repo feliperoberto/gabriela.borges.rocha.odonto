@@ -30,13 +30,12 @@ export function AboutSection() {
         <RevealGroup className={styles.text}>
           <SectionHeading eyebrow="Capítulo três" title="Prazer, Gabriela." align="left" />
           <p className={styles.description}>
-            Sou cirurgiã-dentista e atuo como clínica geral, atendendo famílias inteiras — das
-            crianças aos avós. Trago para cada consulta a experiência de quem conhece a
-            odontologia pelos dois lados da cadeira: com olhar técnico apurado e o compromisso
-            de tornar cada visita mais leve e humana.
+            Hoje, como cirurgiã-dentista, encontrei na Odontologia a forma que escolhi para cuidar de pessoas.
+            Acredito em uma odontologia que começa antes do procedimento: em ouvir, entender o que cada paciente precisa e explicar cada etapa com clareza. Cuidar da saúde bucal também é construir uma relação de confiança ao longo de cada atendimento.
+            Atuo como clínica geral e recebo pacientes de diferentes idades e necessidades, buscando fazer da consulta um momento de cuidado, escuta e segurança.
           </p>
           <p className={styles.credentials}>
-            CRO-SP 176648 · Atendimento em São José dos Campos e Mogi das Cruzes
+            CRO-SP 176648 · Atendimento em São José dos Campos, Mogi das Cruzes e Biritiba-Mirim.
           </p>
         </RevealGroup>
       </div>

@@ -71,8 +71,8 @@ for (const viewport of VIEWPORTS) {
 
     const sections: { name: string; locate: (page: Page) => ReturnType<Page["locator"]> }[] = [
       { name: "hero", locate: (page) => sectionByHeading(page, /Cuidar/) },
-      { name: "chapter-1", locate: (page) => sectionByHeading(page, "Do outro lado da cadeira") },
-      { name: "chapter-2", locate: (page) => sectionByHeading(page, "Hoje, cirurgiã-dentista") },
+      { name: "chapter-1", locate: (page) => sectionByHeading(page, "Uma história que começou antes de ser dentista") },
+      { name: "chapter-2", locate: (page) => sectionByHeading(page, "A escolha pela Odontologia") },
       { name: "sobre", locate: (page) => page.locator("#sobre") },
       { name: "depoimentos", locate: (page) => sectionByHeading(page, "Quem passou por aqui") },
       { name: "servicos", locate: (page) => sectionByHeading(page, "O que eu faço") },

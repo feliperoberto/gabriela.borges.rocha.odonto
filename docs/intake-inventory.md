@@ -20,8 +20,8 @@ targets and must work as real deep links (`/#sobre` loads `/` and scrolls to the
 |---|---|---|---|
 | 1 | `SiteHeader` | (header) | Logo (`logo-gabriela.webp`) + "Agendar consulta" pill → WhatsApp |
 | 2 | `Hero` | Hero | Staged word-by-word `h1` entrance (`gbUp` keyframes, staggered delays), floating blob (`gbFloat`), WhatsApp CTA (`#hero-cta`), 3 trust links (CRO / Convênios / Unidades) |
-| 3 | `ChapterStory` | Capítulo 1 — Do outro lado da cadeira | Text + 3 value chips (acolhimento, esmero técnico, ética) |
-| 4 | `ChapterToday` | Capítulo 2 — Hoje, cirurgiã-dentista | Photo (`fotopolimerizador.jpg`) + quote |
+| 3 | `ChapterStory` | Capítulo 1 — Uma história que começou antes de ser dentista | Text + 3 value chips (acolhimento, cuidado, responsabilidade) |
+| 4 | `ChapterToday` | Capítulo 2 — A escolha pela Odontologia | Photo (`fotopolimerizador.jpg`) + quote |
 | 5 | `AboutSection` (`#sobre`) | Capítulo 3 — Sobre mim | Parallax portrait (`apresentacao-gabriela.jpg`, factor `-0.07`) + bio + CRO line |
 | 6 | `TestimonialsSection` | Capítulo 4 — Depoimentos | Drag/snap horizontal carousel, 3 testimonials, right edge fade, "Arraste para o lado" hint |
 | 7 | `ServicesExplorer` | Capítulo 5 — O que eu faço | 8 procedure toggle chips; selecting one shows a description panel below; re-click deselects/hides it; only one selected at a time |

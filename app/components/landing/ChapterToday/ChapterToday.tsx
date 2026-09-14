@@ -21,11 +21,11 @@ export function ChapterToday() {
           </div>
         </RevealGroup>
         <RevealGroup className={styles.text}>
-          <SectionHeading eyebrow="Capítulo dois" title="Hoje, cirurgiã-dentista" align="left" />
+          <SectionHeading eyebrow="Capítulo dois" title="A escolha pela Odontologia" align="left" />
           <p className={styles.description}>
-            …com a segurança de quem escolheu a profissão conhecendo-a profundamente. Cada
-            atendimento é planejado com responsabilidade e dedicação, em um ambiente pensado
-            para você se sentir cuidado do início ao fim.
+            …com a segurança de quem escolheu a profissão conhecendo-a profundamente.
+            Foi essa vivência, sob diferentes perspectivas, que me levou a escolher a Odontologia. E hoje, como cirurgiã-dentista, continuo construindo essa história.
+            “Eu conheço o cuidado por diferentes perspectivas — porque fiz parte de cada uma delas.”
           </p>
           <p className={styles.quote}>
             &ldquo;Eu entendo cada detalhe do seu cuidado — porque já vivi todos eles.&rdquo;
