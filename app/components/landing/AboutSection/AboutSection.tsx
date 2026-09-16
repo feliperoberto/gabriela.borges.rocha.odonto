@@ -29,14 +29,20 @@ export function AboutSection() {
         </RevealGroup>
         <RevealGroup className={styles.text}>
           <SectionHeading eyebrow="Capítulo três" title="Prazer, Gabriela." align="left" />
+          <p className={styles.credentials}>CRO-SP 176648</p>
           <p className={styles.description}>
-            Hoje, como cirurgiã-dentista, encontrei na Odontologia a forma que escolhi para cuidar de pessoas.
+            Encontrei na Odontologia a forma que escolhi para cuidar de pessoas.
+          </p>
+          <p className={styles.description}>
             Acredito em uma odontologia que começa antes do procedimento: em ouvir, entender o que cada paciente precisa e explicar cada etapa com clareza. Cuidar da saúde bucal também é construir uma relação de confiança ao longo de cada atendimento.
-            Atuo como clínica geral e recebo pacientes de diferentes idades e necessidades, buscando fazer da consulta um momento de cuidado, escuta e segurança.
           </p>
-          <p className={styles.credentials}>
-            CRO-SP 176648 · Atendimento em São José dos Campos, Mogi das Cruzes e Biritiba-Mirim.
+          <p className={styles.description}>
+            Atuo como clínica geral e recebo pacientes de diferentes idades e necessidades, buscando fazer da consulta um momento de cuidado, escuta e confiança para:
           </p>
+          <ul>
+            <li>Mogi das Cruzes, Biritiba-Mirim e Salesópolis</li>
+            <li>São José dos Campos e Jacareí</li>
+          </ul>
         </RevealGroup>
       </div>
     </section>

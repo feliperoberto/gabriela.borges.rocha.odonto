@@ -39,8 +39,9 @@ export function Hero({ profile }: HeroProps) {
           <span className={[styles.word, styles.emphasis].join(" ")}>história.</span>
         </h1>
         <p className={styles.description}>
-          Hoje, reúno toda essa experiência para oferecer um atendimento cuidadoso, responsável e, acima de tudo, humano, em São José dos Campos, Mogi das Cruzes e Biritiba-Mirim.
-          Mais de uma década vivendo a odontologia por dentro — minha história começa bem antes da graduação, atravessando diversas áreas até chegar à profissão que escolhi para mim: ser cirurgiã-dentista.</p>
+          Mais de uma década vivendo a odontologia por dentro — 
+          Atuei como auditora, TSB, e atendimento. Após longa jornada e muita experiênica acumulada, atuo hoje como Cirurgiã-Dentista em Mogi das Cruzes e São José dos Campos (incluindo público de Biritiba-Mirim, Jacareí e Salesópolis).
+        </p>
         <CtaLink
           id="hero-cta"
           variant="whatsapp"

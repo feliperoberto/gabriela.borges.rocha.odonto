@@ -12,7 +12,7 @@ const meta: Meta<typeof SiteHeader> = {
       tel: "+5512983185513",
       telDisplay: "(12) 9 8318-5513",
       email: "dra.gabrielaborgesrocha@gmail.com",
-      instagram: "dra.gabiborges.odonto",
+      instagram: "dra.gabiborges.dentista",
       cities: ["São José dos Campos", "Mogi das Cruzes"],
       whatsapp: {
         phone: "5512983185513",
