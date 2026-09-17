@@ -39,8 +39,8 @@ export function Hero({ profile }: HeroProps) {
           <span className={[styles.word, styles.emphasis].join(" ")}>história.</span>
         </h1>
         <p className={styles.description}>
-          Mais de uma década vivendo a odontologia por dentro — hoje, do lado de quem cuida.
-          Atendimento acolhedor, ético e seguro em São José dos Campos e Mogi das Cruzes.
+          Mais de uma década vivendo a odontologia por dentro — 
+          Atuei como auditora, TSB, e atendimento. Após longa jornada e muita experiênica acumulada, atuo hoje como Cirurgiã-Dentista em Mogi das Cruzes e São José dos Campos (incluindo público de Biritiba-Mirim, Jacareí e Salesópolis).
         </p>
         <CtaLink
           id="hero-cta"

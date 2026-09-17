@@ -19,8 +19,8 @@ describe("HomePage", () => {
     const sectionsInOrder = [
       "Agendar consulta",
       "Cuidar",
-      "Do outro lado da cadeira",
-      "Hoje, cirurgiã-dentista",
+      "Uma história que começou antes de ser dentista",
+      "A escolha pela Odontologia",
       "Prazer, Gabriela.",
       "Quem passou por aqui",
       "O que eu faço",

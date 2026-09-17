@@ -11,7 +11,7 @@ export default meta;
 type Story = StoryObj<typeof SectionHeading>;
 
 export const Centered: Story = {
-  args: { eyebrow: "Capítulo um", title: "Do outro lado da cadeira" },
+  args: { eyebrow: "Capítulo um", title: "Uma história que começou antes de ser dentista" },
 };
 
 export const WithDescription: Story = {

@@ -27,9 +27,7 @@ export function InsuranceSection({ insurances }: InsuranceSectionProps) {
             </div>
           ))}
         </div>
-        <p className={styles.note}>
-          Também atendo particular. Consulte disponibilidade do seu plano pelo WhatsApp.
-        </p>
+        <p className={styles.note}>Consulte disponibilidade do seu plano pelo WhatsApp. Também atendo particular.</p>
       </RevealGroup>
     </section>
   );

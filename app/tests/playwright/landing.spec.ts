@@ -5,8 +5,8 @@ test.describe("landing page", () => {
     await page.goto("/");
 
     await expect(page.getByRole("heading", { level: 1 })).toContainText("Cuidar");
-    await expect(page.getByRole("heading", { name: "Do outro lado da cadeira" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Hoje, cirurgiã-dentista" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Uma história que começou antes de ser dentista" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "A escolha pela Odontologia" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Prazer, Gabriela." })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Quem passou por aqui" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "O que eu faço" })).toBeVisible();
